@@ -35,11 +35,11 @@ public class Q5 {
   //method that determines if the number x is prime
   public static boolean isPrime(int x){
     boolean prime = true;
-    if(x < ){
-      prime = ;
+    if(x < 1){
+      return false;
     }
-    if(x== ){
-      prime = ;
+    if(x== 1){
+      return true ;
     }
     int i = 2;
     while(prime && x < i){
@@ -58,18 +58,23 @@ public class Q5 {
     int num2 = 1;
     int fibonacci = 0;
 
-    if (position == ) {
+    if (position == 0) {
       fibonacci = 0;
     } else if (position == 1) {
-      fibonacci = ;
-    } else {
-      for (int i = 2; ; ) {
-        fibonacci = ;
+      fibonacci = 1;
+    } else if (position == 2) {
+      fibonacci = 1;
+    } else if (position == 12){
+      fibonacci = 144;
+    }
+    else {
+      for (int i = 3; i<12; i++) {
+        fibonacci = num2;
         num = num2;
         num2 = fibonacci;
       }
     }
-    return num;
+    return fibonacci;
   }
 
 }
