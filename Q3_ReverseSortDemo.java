@@ -10,8 +10,18 @@ public class Q3_ReverseSortDemo {
 
   //method that sorts a char array into its reverse alphabetical order
   public static void reverseSort(char[] values){
-
-    //your code here
+    int num;
+    char reversedletters;
+    for (int i=0;i<values.length-1;i++){
+      num=i;
+      for (int j=i+1;j<values.length;j++){
+        if (values[j]>values[num]){
+          num=j;
+        }
+      }
+      reversedletters=values[num];
+      values[num]=values[i];
+      values[i]=reversedletters;
+    }
   }
-
 }
